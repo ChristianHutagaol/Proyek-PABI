@@ -1,0 +1,304 @@
+* { 
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 20px;
+    font-size: 15px;
+
+}
+html{
+    margin: 0;
+    padding: 0;
+  
+    scroll-behavior: smooth;
+}
+body{
+    margin:0px;
+    padding:0px;
+}
+.layar-dalam{
+    width: 1000px;
+    margin: auto;
+}
+.layar-penuh{
+    width: 100%;
+}
+nav{
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 60px;
+    width: 100%;
+}
+nav.putih{
+    background-color: #fff;
+}
+nav .logo{
+    float: left;
+    position:relative;
+    line-height: 55px;
+    text-align: center;
+}
+nav .logo img{ /*besarnya gambar*/
+    vertical-align: middle;
+    width: 120px;
+}
+
+nav .menu{
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+
+nav .menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+
+nav .menu ul li{
+    list-style-type: none;
+    float: left;
+    line-height: 95px;
+}
+
+nav ul li a{ /*pengaturan untuk a */
+    color : lightblue;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover{ /* mengatur untuk kursor jika ingin mengklik navigasi (ada underline)*/
+    text-decoration: underline;
+}
+/*pengaturan header*/
+header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2; 
+}
+header img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+header .intro{
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+header .intro h3{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+.Klik{
+    background-color: pink;
+    height: 40px; /* ukuran background color*/
+    line-height: 42px; /* ukuran background color*/
+    text-decoration: none; /* untuk menghilangkan garis bawah*/
+    display: inline-block; /* agar height dan line height nya  kelihatan */
+    padding: 0px 30px 0px 30px;
+    font-size: 20px;
+    color: lightseagreen;
+    border-radius: 10px; /*agar border tombol tidak persegi saja */
+}
+header .overlay{ /* untuk mengatur kecahayaan background image pada website*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 100%;/*mengatur kecerahan*/
+    z-index: 2;
+}
+.tombol-menu{
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.tombol-menu .garis{
+    height: 3px;
+    background-color: #fff;
+}
+section{
+    padding: 50px 0px 50px 0px;
+}
+section h3{
+    font-size: 30px;
+}
+section h3::after{ /*  section h3::after adalah sebuah CSS Selector yang digunakan untuk memilih elemen pseudo-elemen ::after dari setiap elemen <h3> yang berada di dalam sebuah elemen <section>. Pseudo-elemen ::after digunakan untuk menambahkan isi atau konten baru setelah elemen yang dipilih.*/
+    content: ""; 
+    border-bottom: 5px solid #c86b85;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+#contact {
+    text-align: center;
+}
+section  p.ringkasan{
+    font-style: italic;
+    font-size: 18px;
+    color: lightblue;
+}
+section .konten-isi p{
+    font-style: normal;
+}
+nav .putih{
+    background-color: none;
+}
+nav.putih .tombol-menu .garis{
+    background-color: black;
+}
+nav.putih ul li a {
+    color: black;
+}
+section.abuabu{ /*pengaturan pada section */
+    background-color: #f6f6f6;
+}
+.blog{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.blog h6{
+    margin: 0px;
+    margin-top: 20px;
+    padding:0px;
+    font-size:  18px;
+    font-weight: bold;
+}
+.blog img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+  }
+  .blog div{
+    text-align: center;
+    width: 33.33%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  .layar-dalam.blog { /* Kita menambahkan display: flex pada .layar-dalam.blog untuk membuat container menjadi flexbox dan menggunakan justify-content: space-between agar elemen terdistribusi secara merata pada baris yang sama.*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1050px;
+    margin: 0 auto;
+  } /* <div class="layar-dalam blog"> adalah sebuah tag <div> yang memiliki dua atribut kelas (class), yaitu layar-dalam dan blog*/
+  
+  section#gallery{ /*pengaturan id galery pada section*/
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+  }
+  section#gallery div{
+    padding: 10px;
+  }
+  section#gallery div img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  section#gallery div img:hover{
+    transition : all 0.2s ease-in-out;
+    transform: scale(1.1);
+
+  }
+
+  /* Setel kontainer video */
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* Setel video */
+  .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*transform: translate(-50%, -50%); adalah kode CSS yang digunakan untuk menggeser posisi sebuah elemen ke tengah-tengah suatu kontainer, baik secara horizontal maupun vertikal. Pada kode tersebut, nilai -50% yang diberikan pada sumbu x (horizontal) dan sumbu y (vertikal) berarti elemen akan digeser ke arah kiri dan atas sebesar setengah dari lebar dan tinggi elemen tersebut, sehingga elemen tersebut akan terletak di tengah-tengah kontainer.*/
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-color: white;
+  }
+  
+  /* Setel overlay video */
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  footer{
+    padding: 50px 0px 50px 0px;
+    background-color: #343a40;
+    color: #fff;
+  }
+  footer .layar-dalam{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .layar-dalam div{
+    width: 20%;
+  }
+  footer .layar-dalam h5{
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+@media screen and (max-width:991.98px) { /*untuk mengatur website responsive, mengatur navigasinya */
+    .layar-dalam{
+        width: 90%;
+    }
+    nav .menu ul{
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    } 
+    nav .menu ul li{
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        background-color: black;
+        line-height: 40px;
+    }
+    nav .menu ul li a{
+        color: lightblue;
+    }
+    .tombol-menu{
+        display: flex; /*untuk mengaktifkan/ menampilkan tombol menu saat di minimize*/
+    } 
+}
+
